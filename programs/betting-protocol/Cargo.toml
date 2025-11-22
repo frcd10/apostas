@@ -1,0 +1,17 @@
+[package]
+name = "betting-protocol"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+name = "betting_protocol"
+crate-type = ["cdylib", "lib"]
+
+[features]
+no-entrypoint = []
+no-idl = []
+no-log-ix-name = []
+idl-build = ["anchor-lang/idl-build"]
+
+[dependencies]
+anchor-lang = "0.30.1"

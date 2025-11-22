@@ -1,0 +1,20 @@
+[toolchain]
+anchor_version = "0.30.1"
+
+[features]
+resolution = true   
+skip-lint = false
+
+[programs.devnet]
+betting_protocol = "9Es1qutgqjqoYf2AmpepDZMCSTUbAkQxHkcsFL53Gn9a"
+
+[registry]
+url = "https://api.apr.dev"
+
+[provider]
+cluster = "devnet"
+wallet = "apostaskey/apostaskey.json"
+url = "https://devnet.helius-rpc.com/?api-key=70d80c54-11ad-4a9f-b4e6-ffe7964777be"
+
+[workspace]
+members = ["programs/betting-protocol"]

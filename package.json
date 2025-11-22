@@ -1,0 +1,22 @@
+{
+  "name": "solana-betting-protocol",
+  "private": true,
+  "workspaces": [
+    "app"
+  ],
+  "scripts": {
+    "keygen": "solana-keygen new -o apostaskey/apostaskey.json",
+    "build": "anchor build && cd app && npm run build",
+    "deploy": "anchor deploy --provider.cluster devnet",
+    "test": "anchor test",
+    "dev": "concurrently \"anchor localnet\" \"cd app && npm run dev\"",
+    "airdrop": "solana airdrop 2 --keypair apostaskey/apostaskey.json"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.0"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  }
+}
